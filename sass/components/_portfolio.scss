@@ -1,0 +1,139 @@
+.portfolio-section {
+    padding-bottom: 94px;
+    padding-top: 92px;
+  }
+  .portfolio-img {
+    display: block;
+    height: auto;
+    min-width: 0;
+  }
+  
+  .portfolio-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    & li:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  
+  .btn-portfolio {
+  font-family: $mainFont;
+  font-style: $mainFontStyle;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: $mainLetterSpacing;
+  color: $txt-title-color;
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 22px;
+  background-color: $background;
+  color: $txt-title-color;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $primery-white-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+      0px 1px 2px rgba(0, 0, 0, 0.08), 
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  /* PROJECTS */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .projects:last-child {
+    &:hover .portfolio-image-caption,
+    &:focus-within .portfolio-image-caption{
+    cursor: pointer;
+    transform: translateY(0);
+  }
+}
+  
+  .projects {
+    width: 370px;
+    margin: 15px;
+  }
+ 
+  .portfolio-link {
+    display: block;
+    font-size: 100%;
+    transition: $transition-property, $transition-duration-timing;
+    &:hover,
+    &:focus,
+    &:hover .portfolio-image-caption,
+    &:focus .portfolio-image-caption{
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+      transform: translateY(0);
+    }
+  }
+  
+  .projects:hover .portfolio-image-caption-text,
+  .projects:focus .portfolio-image-caption-text{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+      transform: translateY(0%);
+    }
+
+  .portfolio-image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-image-caption {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    padding: 63px 24px;
+    background-color: $accent-bgr;
+    transition: transform, $transition-duration-timing;
+  }
+
+  .portfolio-image-caption-text {
+    font-weight: $mainFontWeight;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $primery-white-color;
+  }
+  
+  .portfolio-content {
+    padding: 20px 24px;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    height: 111px;
+  }
+  
+  .project-name {
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: $txt-title-color;
+    font-weight: $boldFontWeight;
+    font-size: 18px;
+    line-height: 2;
+    width: 320px;
+    height: 36px;
+  }
+  
+  .project-type {
+    margin: 0;
+    font-weight: $mainFontWeight;
+    color: $txt-primery-color;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: $mainLetterSpacing;
+  }
+  

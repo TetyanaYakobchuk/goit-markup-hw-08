@@ -1,0 +1,47 @@
+.section-advantages {
+    max-width: 1600px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: auto;
+  }
+  
+  .advantages {
+    display: flex;
+    margin: -15px;
+  }
+  
+  .advantages .item {
+    width: 270px;
+    margin: 15px;
+  }
+  .advantages-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background-color: $background;
+  }
+  .advantages-icons .icon {
+    width: 70px;
+    height: 70px;
+  }
+  .secondary-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $txt-title-color;
+    font-weight: $boldFontWeight;
+    font-size: $mainFontSize;
+    line-height: 1.14;
+    letter-spacing: $mainLetterSpacing;
+    text-transform: uppercase;
+  }
+  .text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $mainFontSize;
+    line-height: 1.71;
+    letter-spacing: $mainLetterSpacing;
+  }

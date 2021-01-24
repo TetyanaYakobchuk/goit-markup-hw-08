@@ -1,0 +1,45 @@
+.client {
+    width: auto;
+    margin: auto;
+  }
+  .client-logo {
+    display: flex;
+  }
+  .client-logo li + li{
+    margin-left: 30px;
+}
+  .client-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid $icons-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: $icons-color;
+    //transition: $transition-property, $transition-duration-timing;
+    &:hover,
+    &:focus
+    // &:hover svg,
+    // &:focus svg {
+      {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    //transition: $transition-property, $transition-duration-timing;
+  }
+  // &:not(:nth-child(6n)) {
+  //   margin-right: 30px;
+  // }
+}
+ 
+  .client-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: $txt-title-color;
+    font-weight: $boldFontWeight;
+    font-size: 36px;
+    line-height: $mainLineHeight;
+    text-align: center;
+    letter-spacing: $mainLetterSpacing;
+  }

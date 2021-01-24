@@ -1,0 +1,41 @@
+.job-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 94px;
+  }
+  
+  .job-images {
+    display: flex;
+  }
+  
+  .job-image:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .job-image {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .case-item {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    font-style: $mainFontStyle;
+    bottom: 0px;
+    width: 100%;
+    font-weight: 600;
+    font-size: $mainFontSize;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primery-white-color;
+    text-align: center;
+    padding: 13px 15px;
+    background: $overlay-color;
+    z-index: 1;
+  }
+  

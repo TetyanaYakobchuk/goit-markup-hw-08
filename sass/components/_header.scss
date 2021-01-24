@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid $border-header;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-nav {
+    display: flex;
+    transition: $transition-property, $transition-duration-timing;
+    & .item + .item {
+      margin-left: 50px;
+    }
+  }
+  
+  .nav-page {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $txt-title-color;
+    font-weight: 500;
+    font-size: $mainFontSize;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+  }
+  .nav-page.current {
+    position: relative;
+    color: $accent-color;
+    font-weight: 500;
+    font-size: $mainFontSize;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+  }
+
+
+
+
+
