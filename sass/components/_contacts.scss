@@ -1,34 +1,87 @@
 .site-contact {
   display: flex;
   margin-left: auto;
-  transition: $transition-property, $transition-duration-timing;
+  // transition: $transition-property, $transition-duration-timing;
+  
+    @media screen and (max-width: 767px) {
+      .item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+    }
+  
+    @media screen and (max-width: 1199px) {
+      .item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      margin-top: 19px;
+      margin-bottom: 19px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
 }
+
 .site-contact .nav-contact {
   font-weight: 500;
   font-size: $mainFontSize;
-  line-height: 1.33;
+  line-height: $mainLineHeight;
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: $mainLineHeight;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $mainFontSize;
+    line-height: 1.33;
+  }
 }
 .nav-contact {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   &:hover,
   &:focus {
   color: $accent-color;
+  }
 }
-}
+
 .nav-contact:hover,
 .nav-contact:focus {
 color: $accent-color;
 }
 .site-contact .item + .item {
-  margin-left: 50px;
+  //margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 .contact-icon {
   margin-right: 10px;
   fill: currentColor;
-  transition: $transition-property, $transition-duration-timing;
+  //transition: $transition-property, $transition-duration-timing;
 }
 // .nav-contact:hover,
 // .nav-contact:focus,
@@ -36,4 +89,4 @@ color: $accent-color;
 // .site-contact .item:focus {
 //   color: var(--accent-color);
 // }
-  
+  //---------------------------------------
