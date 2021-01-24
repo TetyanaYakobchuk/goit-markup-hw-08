@@ -1,19 +1,39 @@
 .section-advantages {
-    max-width: 1600px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin: auto;
+    //max-width: 1600px;
+    //padding-top: 0px;
+    //padding-bottom: 0px;
+    //margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   
   .advantages {
     display: flex;
     margin: -15px;
-  }
+    //width: 270px;
+    //margin: 15px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   
-  .advantages .item {
-    width: 270px;
-    margin: 15px;
+    .item {
+      margin: 15px;
+  
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px) / 2);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 4 * 30px) / 4);
+      }
+    }
   }
+
   .advantages-icons {
     display: flex;
     justify-content: center;
@@ -21,13 +41,15 @@
     height: 120px;
     border-radius: 4px;
     margin-bottom: 30px;
-    padding: 25px 100px;
+    //padding: 25px 100px;
     background-color: $background;
+
+    .icon {
+      width: 70px;
+      height: 70px;
+    }
   }
-  .advantages-icons .icon {
-    width: 70px;
-    height: 70px;
-  }
+
   .secondary-title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -37,6 +59,9 @@
     line-height: 1.14;
     letter-spacing: $mainLetterSpacing;
     text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
   .text {
     margin-top: 0;
