@@ -1,3 +1,7 @@
+.header-container{
+  display: flex;
+  align-items: center;
+}
 .header {
     // width: 100%;
     // height: 80px;
@@ -13,37 +17,51 @@
       left: 0;
       z-index: 10;
       width: 100%;
+
     }
-  }
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-
-    @media screen and (max-width: 767px) {
-      justify-content: space-between;
-      min-height: 60px;
-    }
-  
-    @media screen and (min-width: 1200px) {
+    .container {
       display: flex;
       align-items: center;
+  
+      @media screen and (max-width: 767px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        justify-content: space-between;
+      }
+      @media screen and (min-width: 768px) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        justify-content: unset;
+      }
     }
   }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+
   .menu-button {
     display: inline-flex;
-    margin: 0;
-    padding: 0;
+    //margin: 0;
+    //padding: 0;
     border: none;
     background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    color: rgba(33, 33, 33, 1);
+    transition: all, $transition-duration-timing;
   
     @media screen and (min-width: 768px) {
       display: none;
+    }
+    &:hover,
+    &:focus {
+    color: $accent-color;
     }
   }
   
@@ -77,10 +95,28 @@
   .icon-close-menu:focus {
     fill: $accent-color;
   }
+  .icon-menu,
+  .menu-close {
+  fill: currentColor;
+}
+
+.menu-button .icon-close-menu {
+  display: none;
+}
+.menu-button.is-open .icon-close-menu {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
   
   .menu-container {
-    background-color: $primary-white-color;
-    text-align: center;
+    //background-color: $primary-white-color;
+    //text-align: center;
+    display: none;
+    display: flex;
+    // justify-content: space-between;
+    // flex-grow: 1;
   
     @media screen and (max-width: 767px) {
       display: none;
@@ -91,69 +127,88 @@
       width: 100%;
       padding-top: 60px;
       padding-bottom: 60px;
-  
-      border-top: 1px solid $border-header;
-  
+      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+      //border-top: 1px solid $border-header;
+    
       &.is-open {
         display: block;
       }
     }
-  
-    @media screen and (min-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      text-align: left;
-      width: 100%;
-    }
+      @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        text-align: center;
+      }
+      @media screen and (min-width: 1200px) {
+      }
   }
   
   .site-nav {
-    // display: flex;
     // transition: $transition-property, $transition-duration-timing;
     // & .item + .item {
     //   margin-left: 50px;
     // }
     @media screen and (max-width: 767px) {
       margin-bottom: 60px;
+      display: block;
+      width: 100%;
   
-      .item:not(:last-child) {
-        margin-bottom: 40px;
-      }
+      // .item:not(:last-child) {
+      //   margin-bottom: 40px;
+      // }
     }
-  
+
     @media screen and (min-width: 768px) {
       display: flex;
+      align-items: center;
     }
-  
-    .item {
-      position: relative;
-    }
-  
-    @media screen and (min-width: 768px) {
-      display: flex;
-  
-      .item:not(:last-child) {
-        margin-right: 50px;
-      }
-    } 
   }
   
+
+  // .nav-item {
+  //     position: relative;
+    
+  //   @media screen and (min-width: 768px) {
+  //     display: flex;
+  
+  //     .item:not(:last-child) {
+  //       margin-right: 50px;
+  //     }
+  //   } 
+  // }
+  .item {
+    @media screen and (max-width: 767px) {
+      margin: 0 auto 40px;
+      padding-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      width: min-content;
+    }
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
   .nav-page {
-    //display: block;
-    //padding-top: 32px;
-    //padding-bottom: 32px;
+    position: relative;
+    display: block;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     color: $txt-title-color;
     font-weight: 500;
     font-size: 18px;
     line-height: $mainLineHeight;
     letter-spacing: 0.02em;
-    transition-property: color;
+    //transition-property: color;
     transition: $transition-duration-timing;
     @media screen and (min-width: 768px) {
-      display: block;
+      //display: block;
       font-size: 14px;
       line-height: 1.33;
-  
       padding-top: 32px;
       padding-bottom: 32px;
     }
