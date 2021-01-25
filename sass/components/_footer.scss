@@ -1,7 +1,7 @@
 .footer {
     //width: auto;
     //height: 252px;
-    background-color: $bgr-primery-dark; rgba(47, 48, 58, 1);
+    background-color: $bgr-primery-dark;
 
   .container {
     padding-top: 60px;
@@ -149,7 +149,7 @@
   }
 
   .footer-social .logo-social {
-    fill: $text-secondary;
+    fill: rgba(255, 255, 255, 1);
     transition: all, $transition-duration-timing;
   } 
 
@@ -159,7 +159,7 @@
     transition: $transition-property, $transition-duration-timing;
     &:hover,
     &:focus {
-      background-color: $icon-bac-hover;
+      background-color: rgba(33, 150, 243, 1);
       //transition: $transition-property, $transition-duration-timing;
     }
   }
