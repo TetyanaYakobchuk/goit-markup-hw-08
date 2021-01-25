@@ -16,37 +16,32 @@
 
   <body>
       <!--Главная навигация-->
-      <header class="header container">
-        <div class="header-nav">
-          <nav>
-            <a href="/" class="logo-web">Web<span class="logo-studio">Studio</span></a>
-            <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-              <svg width="40" height="40" aria-label="Переключатель моб меню">
-                  <use class="icon-menu" href="./img/sprite-icons.svg#menu"></use>
-                  <use class="icon-close-menu" href="./img/sprite-icons.svg#close-menu"></use>
-              </svg>
-          </button>
+      <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo-web">Web<span class="logo-studio">Studio</span></a>          
           <div class="menu-container" id="menu-container" data-menu>
-            <ul class="site-nav">
-              <li class="item">
-                <a href="./index.html" class="nav-page change current">Студия</a>
-              </li>
-              <li class="item">
-                <a href="./portfolio.html" class="nav-page change">Портфолио</a>
-              </li>
-              <li class="item">
-                <a href="" class="nav-page change">Контакты</a>
-              </li>
-            </ul>
+            <nav class="navigation">
+              <ul class="site-nav">
+                <li class="item">
+                  <a href="./index.html" class="nav-page change current">Студия</a>
+                </li>
+                <li class="item">
+                  <a href="./portfolio.html" class="nav-page change">Портфолио</a>
+                </li>
+                <li class="item">
+                  <a href="" class="nav-page change">Контакты</a>
+                </li>
+              </ul>
+            </nav>
           <ul class="site-contact">
-            <li class="item">
+            <li class="address-item">
               <a href="mailto:info@devstudio.com" class="nav-contact">
                 <svg class="contact-icon" width="16" height="12">
                   <use href="./images/sprite.svg#e-mail"></use>
                 </svg>info@devstudio.com
               </a>
             </li>
-            <li class="item">
+            <li class="address-item">
               <a href="tel:+380961111111" class="nav-contact">
                 <svg class="contact-icon" width="10" height="16">
                   <use href="./images/sprite.svg#tel"></use>
@@ -55,7 +50,12 @@
             </li>
           </ul>
         </div>
-      </nav>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="Бургер меню">
+              <use class="icon-menu" href="./images/sprite.svg#burger-menu"></use>
+              <use class="icon-close-menu" href="./images/sprite.svg#close-burger-menu"></use>
+          </svg>
+        </button>
       </div>
       </header>
 
@@ -127,19 +127,19 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
             <ul class="job-images">
               <li class="job-image">
-                <img srcset="./img/box_1_coding.jpg 1x,./img/box_1_coding@2x.jpg 2x" src="./images/img1.jpg" alt="Клавиатура" width="370">
+                <img srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x" src="./images/img1.jpg" alt="Клавиатура" width="370">
                 <div class="case-item">
                   <h3>Десктопные приложения</h3>
                 </div>
               </li>
               <li class="job-image">
-                <img srcset="./img/box_2_visualization.jpg 1x, ./img/box_2_visualization@2x.jpg 2x" src="./images/img2.jpg" alt="Смартфон" width="370">
+                <img srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x" src="./images/img2.jpg" alt="Смартфон" width="370">
                 <div class="case-item">
                   <h3>Мобильные приложения</h3>
                 </div>
               </li>
               <li class="job-image">
-                <img srcset="./img/box_3_designing.jpg 1x, ./img/box_3_designing@2x.jpg 2x" src="./images/img3.jpg" alt="Планшет" width="370">
+                <img srcset="././images/img3.jpg 1x, ./images/img3@2x.jpg 2x" src="./images/img3.jpg" alt="Планшет" width="370">
                 <div class="case-item">
                   <h3>Дизайнерские решения</h3>
                 </div>
@@ -154,7 +154,7 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-faces">
             <li class="team-card">
-              <img class="team-img" srcset="./img/product_designer.jpg 1x, ./img/product_designer@2x.jpg 2x" src="./images/photo1.jpg" alt="Игорь Демьяненко" width="270"/>
+              <img class="team-img" srcset="./images/photo1.jpg 1x, ./images/photo1@2x.jpg 2x" src="./images/photo1.jpg" alt="Игорь Демьяненко" width="270"/>
               <div class="team-content">
               <h3 class="team-name">Игорь Демьяненко</h3>
               <p class="team-position">Product Designer</p>
@@ -191,7 +191,7 @@
             </div>
             </li>
             <li class="team-card">
-              <img class="team-img" srcset="./img/frontend_developer.jpg 1x, ./img/frontend_developer@2x.jpg 2x" src="./images/photo2.jpg" alt="Ольга Репина" width="270" />
+              <img class="team-img" srcset="./images/photo2.jpg 1x, ./images/photo2@2x.jpg 2x" src="./images/photo2.jpg" alt="Ольга Репина" width="270" />
               <div class="team-content">
               <h3 class="team-name">Ольга Репина</h3>
               <p class="team-position">Product Designer</p>
@@ -228,7 +228,7 @@
               </div>
             </li>
             <li class="team-card">
-              <img class="team-img" srcset="./img/marketing.jpg 1x, ./img/marketing@2x.jpg 2x" src="./images/photo3.jpg" alt="Николай Тарасов" width="270" />
+              <img class="team-img" srcset="./images/photo3.jpg 1x, ./images/photo3@2x.jpg 2x" src="./images/photo3.jpg" alt="Николай Тарасов" width="270" />
               <div class="team-content">
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="team-position">Marketing</p>
@@ -265,7 +265,7 @@
               </div>
             </li>
             <li class="team-card">
-              <img class="team-img" srcset="./img/ui_designer.jpg 1x, ./img/ui_designer@2x.jpg 2x" src="./images/photo4.jpg" alt="Михаил Ермаков" width="270" />
+              <img class="team-img" srcset="./images/photo4.jpg 1x, ./images/photo4@2x.jpg 2x" src="./images/photo4.jpg" alt="Михаил Ермаков" width="270" />
               <div class="team-content">
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="team-position">UI Designer</p>
